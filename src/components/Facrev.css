@@ -1,0 +1,133 @@
+
+.Facrev .form{
+    border-right: 2px solid black;
+    padding-right: 100px;
+    height: 91vh;
+}
+
+.Facrev {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin: 0 auto;
+    align-items: center;
+}
+.Facrev form {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+  }
+
+
+  
+  form {
+    /* display: inline-block; */
+    text-align: left;
+    /* margin-top: 20px; */
+    width: 20vw;
+
+  }
+  
+  /* div {
+    margin-bottom: 10px;
+  } */
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input, select, textarea {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    border-radius: 0.5rem;
+    border: 0.5px solid rgb(17, 17, 83);
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    background-color: rgb(23, 23, 118);
+    color:white;
+  }
+  
+  
+  .Facrev .reviews {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    margin: 20px;
+    display: flex;
+    width: 60vw;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .table-container {
+    width: 60vw;
+    margin-top: 20px;
+    border-collapse: collapse;
+    max-height: 400px; /* Set your desired height here */
+    overflow-y: scroll;
+    border: 1px solid #ddd;
+    border-collapse: collapse;
+  }
+  
+  .table-header {
+    background-color: #f4f4f4;
+  }
+  
+  .table-body .table-row:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .table-body .table-row:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .table-row {
+    display: flex;
+    width: 100%;
+    text-decoration: none;
+    color: inherit;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .table-cell {
+    flex: 1;
+    padding: 10px;
+    border-right: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  .table-cell:last-child {
+    border-right: none;
+  }
+  
+  .table-header .table-row .table-cell {
+    font-weight: bold;
+    border-bottom: 2px solid #ddd;
+  }
+  
+  .table-row .table-cell:nth-child(1) {
+    flex: 0 0 50px; /* ID column width */
+  }
+  
+  .table-row .table-cell:nth-child(2) {
+    flex: 1 1 200px; /* Name column width */
+  }
+  
+  .table-row .table-cell:nth-child(3) {
+    flex: 1 1 150px; /* Username column width */
+  }
+  
+  .table-row .table-cell:nth-child(4) {
+    flex: 1 1 250px; /* Email column width */
+  }
+  
