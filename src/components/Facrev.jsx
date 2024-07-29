@@ -1,6 +1,8 @@
 import './Facrev.css';
 import { useState, useEffect } from 'react';
 import Navigation from './Navigation';
+import Table from './Table';
+import Search from './Search';
 
 const Facrev = () => {
   const [form, setForm] = useState({
@@ -26,6 +28,8 @@ const Facrev = () => {
       ...form,
       Rating: Number(form.Rating)
     };
+
+
   
     fetch('https://my-backend-1-67e8.onrender.com/facultyreview', {
       method: 'POST',
@@ -48,6 +52,19 @@ const Facrev = () => {
         Rating: 0,
         Review: ''
       });
+      fetch('https://my-backend-1-67e8.onrender.com/facultyreview')
+      .then(response => response.json())
+      .then(data => {
+
+        setData(data);
+        setLoading(false);
+        console.log(data)
+
+      })
+      .catch(error => {
+        console.error('Error fetching data:', error);
+        setLoading(false);
+      });
     })
     .catch(error => {
       console.error('Error:', error);
@@ -60,17 +77,20 @@ const Facrev = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    console.log("useeffect");
     fetch('https://my-backend-1-67e8.onrender.com/facultyreview')
       .then(response => response.json())
       .then(data => {
         setData(data);
         setLoading(false);
+        console.log(data)
       })
       .catch(error => {
         console.error('Error fetching data:', error);
         setLoading(false);
       });
-  }, []);
+    },[]);
+  // }, [hasClick]);
 
   return (
     <div>
@@ -133,7 +153,7 @@ const Facrev = () => {
                 />
               </label>
             </div>
-            <button type="submit">Submit Review</button>
+            <button type="submit" >Submit Review</button>
           </form>
         </div>
 
@@ -141,7 +161,7 @@ const Facrev = () => {
           <div>
             <h1>Reviews (click to know more)</h1>
           </div>
-          <div>
+          {/* <div>
             {loading ? (
               <p>Loading...</p>
             ) : (
@@ -167,7 +187,10 @@ const Facrev = () => {
                 </div>
               </div>
             )}
-          </div>
+          </div> */}
+          <Search data={data} setData={setData}/>
+
+          <Table data={data} loading={loading}/>
         </div>
       </div>
     </div>

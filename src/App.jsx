@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Hero from './components/Hero';
 import Facrev from './components/Facrev';
+import Details from './components/Details';
 
 import './App.css';
 
@@ -19,6 +20,9 @@ const App = () => {
         <Route path="/facrev" Component={Facrev} />
       {/* <Route path="/carpool" Component={Carpool} />
       <Route path="/questionpapers" Component={Questionpapers} /> */}
+      <Route path="/details/:id" element={
+        <Details/>
+      }></Route>
         </Routes>
       </BrowserRouter>
     </div>
