@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Hero from './components/Hero';
 import Facrev from './components/Facrev';
 import Details from './components/Details';
+import Navigation from './components/Navigation';
 
 import './App.css';
 
@@ -15,6 +16,7 @@ const App = () => {
 
     <div>
       <BrowserRouter>
+      <Navigation/>
         <Routes>
         <Route path='/' Component={Hero}/>
         <Route path="/facrev" Component={Facrev} />

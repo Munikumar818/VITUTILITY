@@ -94,7 +94,6 @@ const Facrev = () => {
 
   return (
     <div>
-      <Navigation />
       <div className='Facrev'>
         <div className="Facrev form">
           <form onSubmit={handleSubmit}>
