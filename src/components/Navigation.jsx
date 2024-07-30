@@ -4,9 +4,9 @@ const Navigation=()=>{
     return(
         <div>
       <nav>
-        <div className="logo"> 
-        <img src="/images/logo.jpg"></img>
-        </div>
+       <div>
+        <strong>eduAsync</strong>
+       </div>
         <div>
           <ul>
             <Link to='/' className='links'><li href="/">Home</li></Link>
